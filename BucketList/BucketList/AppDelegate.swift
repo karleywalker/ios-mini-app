@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Bucket List
+//  BucketList
 //
-//  Created by Karley Walker on 2/9/17.
-//  Copyright © 2017 Karley Walker. All rights reserved.
+//  Created by Hanna Dickerson on 2/12/17.
+//  Copyright © 2017 Hanna Dickerson. All rights reserved.
 //
 
 import UIKit
