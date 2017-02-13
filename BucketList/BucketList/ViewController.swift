@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  BucketList
 //
-//  Created by Hanna Dickerson on 2/12/17.
-//  Copyright © 2017 Hanna Dickerson. All rights reserved.
+//  Created by Karley Walker and Hanna Dickerson on 2/12/17.
+//  Copyright © 2017 Karley Walker and Hanna Dickerson. All rights reserved.
 //
 
 import UIKit
