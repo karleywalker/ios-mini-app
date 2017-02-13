@@ -117,7 +117,14 @@
                                     <color key="textShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Add Item" id="4vg-br-9p6"/>
+                                    <navigationItem title="Add Item" id="4vg-br-9p6">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="TgY-Gn-v4y">
+                                            <connections>
+                                                <segue destination="abz-Eh-zJh" kind="show" id="xCp-2Z-VFL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Wgr-d7-wby"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIl-rd-EYP">
