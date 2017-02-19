@@ -21,7 +21,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="UVa Bucket List" id="jLs-4y-mKz">
-                                    <barButtonItem key="leftBarButtonItem" title="+" id="IGM-kT-peG">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="add" id="IGM-kT-peG">
                                         <connections>
                                             <segue destination="aIV-Jw-itk" kind="show" id="nuY-Dy-K0L"/>
                                         </connections>
