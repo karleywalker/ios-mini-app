@@ -29,18 +29,34 @@ class BucketListTableViewController: UITableViewController {
         let date2: Date = dateFormatterGet.date(from: "2018-02-28 12:24:26")!
         let date3: Date = dateFormatterGet.date(from: "2018-05-29 12:24:26")!
         let date4: Date = dateFormatterGet.date(from: "2018-01-29 12:24:26")!
+        let date5: Date = dateFormatterGet.date(from: "2019-05-29 12:24:26")!
+        let date6: Date = dateFormatterGet.date(from: "2012-01-29 12:24:26")!
         
         let item1 = BucketItem(name: "Hike Humpback at sunrise", desc: "Take a panoramic picture of all those trees.", latitude:1.1, longitude: 1.1, date: date1 as Date)
         bucketItems += [item1]
         let item2 = BucketItem(name: "Make a mobile app", desc: "It's gotta be a bucket list.", latitude:2.2, longitude: 2.2, date: date2 as Date)
+        item2.isdone = true
         bucketItems += [item2]
         let item3 = BucketItem(name: "Register to graduate", desc: "Make sure you get a diploma", latitude:3.3, longitude: 3.3, date: date3 as Date)
+        item3.isdone = true
         bucketItems += [item3]
         let item4 = BucketItem(name: "Get a bagel in Rice", desc: "They're delicious", latitude:4.4, longitude: 4.4, date: date4 as Date)
         bucketItems += [item4]
+        let item5 = BucketItem(name: "last of not done", desc: "They're delicious", latitude:4.4, longitude: 4.4, date: date5 as Date)
+        bucketItems += [item5]
+        let item6 = BucketItem(name: "first of done", desc: "They're delicious", latitude:4.4, longitude: 4.4, date: date6 as Date)
+        item6.isdone = true
+        bucketItems += [item6]
         
         //sort by date
         bucketItems.sort(by: { $0.date < $1.date })
+        
+        //sort by isdone
+        bucketItems.sort(by: { (leftProfile, rightProfile) -> Bool in
+            return leftProfile.isdone != true && rightProfile.isdone == true
+        })
+        
+        
     }
     
     //MARK: Button Actions
@@ -100,7 +116,15 @@ class BucketListTableViewController: UITableViewController {
         let convertedDate = dateFormatter.string(from: item.date)
         cell.dateLabel.text = convertedDate
         
-        //cell.backgroundColor = .purple;
+        if(item.isdone){
+            cell.backgroundColor = UIColor(
+                red: 0x9c/255,
+                green: 0x50/255,
+                blue: 0x9c/255,
+                alpha: 1.0)
+        } else {
+            cell.backgroundColor = .white
+        }
         
         
         return cell
@@ -151,16 +175,28 @@ class BucketListTableViewController: UITableViewController {
                 
                 if( item.isdone == false) {
           
-                    cell?.backgroundColor = UIColor(
-                        red: 0x9c/255,
-                        green: 0x50/255,
-                        blue: 0x9c/255,
-                        alpha: 1.0)
+ 
                     item.isdone = true
+                    //sort by date
+                    self.bucketItems.sort(by: { $0.date < $1.date })
+                    
+                    //sort by isdone
+                    self.bucketItems.sort(by: { (leftProfile, rightProfile) -> Bool in
+                        return leftProfile.isdone != true && rightProfile.isdone == true
+                    //reloadlist
+                        //self.tableView.reloadData()
+                    })
                 }
                 else {
                     item.isdone = false
-                    cell?.backgroundColor = .white
+                    //sort by date
+                    self.bucketItems.sort(by: { $0.date < $1.date })
+                    
+                    //sort by isdone
+                    self.bucketItems.sort(by: { (leftProfile, rightProfile) -> Bool in
+                        return leftProfile.isdone != true && rightProfile.isdone == true
+                    })
+                    //self.tableView.reloadData()
                 }
                 
                 
