@@ -47,6 +47,7 @@ class AddItemViewController: UIViewController {
                 item.desc = self.descDisplay.text!
                 item.date = self.dateDisplay.date
                 svc.bucketItems += [item]
+                svc.bucketItems.sort(by: { $0.date < $1.date })
                 svc.tableView.reloadData()
                 
                 

@@ -52,6 +52,7 @@ class EditItemViewController: UIViewController {
                 item.longitude = Double(self.longitudeField.text!)!
                 item.desc = self.descriptionField.text!
                 item.date = self.dateField.date
+                svc.bucketItems.sort(by: { $0.date < $1.date })
                 svc.tableView.reloadData()
                 
                 
