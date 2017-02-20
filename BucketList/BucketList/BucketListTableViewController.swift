@@ -143,23 +143,29 @@ class BucketListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
        
         let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
-            //self.view.backgroundColor = .red
-            //let cellIdentifier = "BucketListTableViewCell"
-            
-            //let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BucketListTableViewCell
             let cell = tableView.cellForRow(at: indexPath)
 
             let item = self.bucketItems[indexPath.row]
             
             if( cell?.isEditing )!{
+                
+                if( item.isdone == false) {
           
-                cell?.backgroundColor = UIColor(
-                    red: 0x9c/255,
-                    green: 0x50/255,
-                    blue: 0x9c/255,
-                    alpha: 1.0)
-                item.isdone = true
+                    cell?.backgroundColor = UIColor(
+                        red: 0x9c/255,
+                        green: 0x50/255,
+                        blue: 0x9c/255,
+                        alpha: 1.0)
+                    item.isdone = true
+                }
+                else {
+                    item.isdone = false
+                    cell?.backgroundColor = .white
+                }
+                
+                
             }
+            
             self.tableView.reloadData()
 
             
