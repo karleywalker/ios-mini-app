@@ -13,7 +13,7 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var nameDisplay: UITextField!
     @IBOutlet weak var latitudeDisplay: UITextField!
     @IBOutlet weak var longitudeDisplay: UITextField!
-    @IBOutlet weak var descriptionDisplay: UITextField!
+    @IBOutlet weak var descDisplay: UITextField!
     @IBOutlet weak var dateDisplay: UIDatePicker!
     
     var index = 0
@@ -40,15 +40,12 @@ class AddItemViewController: UIViewController {
         if (segue.identifier == "unwindFromAddID") {
             if let svc = segue.destination as? BucketListTableViewController {
                 
-                /**
-                let nameU = self.nameDisplay.text
-                let latitudeU = Double(self.latitudeDisplay.text!)
-                let longitudeU = Double(self.longitudeDisplay.text!)
-                let descU = self.descriptionDisplay.text
-                let dateU = self.dateDisplay.date
-                **/
-                //let item = BucketItem(name: nameU!, desc: descU!, latitude:latitudeU!, longitude: longitudeU!, date: dateU)
                 let item = BucketItem(name: "nameU", desc: "descU", latitude:5.22, longitude: 3.14, date: Date())
+                item.name = self.nameDisplay.text!
+                item.latitude = Double(self.latitudeDisplay.text!)!
+                item.longitude = Double(self.longitudeDisplay.text!)!
+                item.desc = self.descDisplay.text!
+                item.date = self.dateDisplay.date
                 svc.bucketItems += [item]
                 svc.tableView.reloadData()
                 
