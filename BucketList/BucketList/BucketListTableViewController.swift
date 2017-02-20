@@ -9,6 +9,8 @@ import UIKit
 
 class BucketListTableViewController: UITableViewController {
     
+
+    
     @IBOutlet weak var nameField: UITextField!
     
     var bucketItems = [BucketItem]()
@@ -146,10 +148,17 @@ class BucketListTableViewController: UITableViewController {
                 svc.latToDisplay = item.latitude
                 svc.longToDisplay = item.longitude
                 svc.descToDisplay = item.desc
+                svc.dateToDisplay = item.date
+                svc.index = count
                 
                 
             }
         }
+    }
+    
+    
+    @IBAction func unwindToBucketList(segue: UIStoryboardSegue) {
+        //"unwindFromEditID"
     }
     
     /*

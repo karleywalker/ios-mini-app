@@ -268,7 +268,11 @@
                                                 <segue destination="hnY-RG-NUW" kind="show" id="M0x-De-RhW"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uF5-yX-EL5"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uF5-yX-EL5">
+                                            <connections>
+                                                <segue destination="wMK-5X-CWR" kind="unwind" identifier="unwindFromEditID" unwindAction="unwindToBucketListWithSegue:" id="Nf9-9W-Pp5"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -276,6 +280,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="dateField" destination="VMl-Ze-wKi" id="Nwv-JW-wU5"/>
                         <outlet property="descriptionField" destination="0Ow-if-3xq" id="thW-8N-ly9"/>
                         <outlet property="latitudeField" destination="SkJ-hW-nDr" id="heI-tb-XEH"/>
                         <outlet property="longitudeField" destination="HVV-7v-M9l" id="bQG-vD-rBb"/>
@@ -283,6 +288,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAh-Na-9m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wMK-5X-CWR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1745" y="817"/>
         </scene>
