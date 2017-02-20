@@ -108,14 +108,14 @@ class BucketListTableViewController: UITableViewController {
     
     // Override to support tapping on an element in the table view.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = indexPath[1]
+       /** let index = indexPath[1]
         let currentItem = bucketItems[index]
         let alertController = UIAlertController(title: currentItem.name, message: currentItem.desc + "\nsaved at: " + currentItem.date.description, preferredStyle: .alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
         
-        present(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil) **/
         
     }
     
