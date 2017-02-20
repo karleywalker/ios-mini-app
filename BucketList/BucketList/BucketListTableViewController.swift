@@ -9,9 +9,24 @@
 import UIKit
 
 class BucketListTableViewController: UITableViewController {
+    
+    var bucketItems = [BucketItem]()
+    
+    func loadSampleItems() {
+        let item1 = BucketItem(name: "name1", desc: "descripton here 1", latitude:1.1, longitude: 1.1, date: Date())
+        bucketItems += [item1]
+        let item2 = BucketItem(name: "name2", desc: "descripton here 2", latitude:2.2, longitude: 2.2, date: Date())
+        bucketItems += [item2]
+        let item3 = BucketItem(name: "name3", desc: "descripton here 3", latitude:3.3, longitude: 3.3, date: Date())
+        bucketItems += [item3]
+        let item4 = BucketItem(name: "name4", desc: "descripton here 4", latitude:4.4, longitude: 4.4, date: Date())
+        bucketItems += [item4]
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadSampleItems()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,7 +44,7 @@ class BucketListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
