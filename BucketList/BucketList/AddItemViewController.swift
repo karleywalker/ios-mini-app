@@ -23,14 +23,18 @@ class AddItemViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func userTappedBackground(sender: AnyObject) {
-        view.endEditing(true)
+    
+    //tap background to close out of keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
     }
     
 

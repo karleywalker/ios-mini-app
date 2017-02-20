@@ -33,12 +33,18 @@ class EditItemViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //tap background to closeout of keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
     
     // MARK: Segue
     // In a storyboard-based application, you will often want to do a little preparation before navigation
