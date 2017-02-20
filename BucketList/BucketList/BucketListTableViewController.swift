@@ -12,9 +12,14 @@ class BucketListTableViewController: UITableViewController {
     @IBOutlet weak var nameField: UITextField!
     
     var bucketItems = [BucketItem]()
+    var count = 0
+    
+    func setCount(newCount: Int){
+        self.count = newCount
+    }
     
     func loadSampleItems() {
-        let item1 = BucketItem(name: "Hike Humpback at sunrise", desc: "Take a panoramic picture of allthose trees.", latitude:1.1, longitude: 1.1, date: Date())
+        let item1 = BucketItem(name: "Hike Humpback at sunrise", desc: "Take a panoramic picture of all those trees.", latitude:1.1, longitude: 1.1, date: Date())
         bucketItems += [item1]
         let item2 = BucketItem(name: "Make a mobile app", desc: "It's gotta be a bucket list.", latitude:2.2, longitude: 2.2, date: Date())
         bucketItems += [item2]
@@ -108,6 +113,8 @@ class BucketListTableViewController: UITableViewController {
     
     // Lets you add various buttons when you swipe
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        
+        
         let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
             
             
@@ -115,7 +122,10 @@ class BucketListTableViewController: UITableViewController {
         done.backgroundColor = .green
         
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
-               self.performSegue(withIdentifier: "editItemSegue", sender: nil)
+            
+            let index = editActionsForRowAt[1]
+            self.setCount(newCount: index)
+            self.performSegue(withIdentifier: "editItemSegue", sender: nil)
             
         }
         edit.backgroundColor = .orange
@@ -131,9 +141,11 @@ class BucketListTableViewController: UITableViewController {
         if (segue.identifier == "editItemSegue") {
             if let svc = segue.destination as? EditItemViewController {
                 
-                
-                   svc.nameToDisplay = "placeholder"
-                
+                let item = self.bucketItems[count]
+                svc.nameToDisplay = item.name
+                svc.latToDisplay = item.latitude
+                svc.longToDisplay = item.longitude
+                svc.descToDisplay = item.desc
                 
                 
             }

@@ -275,6 +275,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="0Ow-if-3xq" id="thW-8N-ly9"/>
+                        <outlet property="latitudeField" destination="SkJ-hW-nDr" id="heI-tb-XEH"/>
+                        <outlet property="longitudeField" destination="HVV-7v-M9l" id="bQG-vD-rBb"/>
+                        <outlet property="nameField" destination="8Eu-SY-La1" id="bvP-ez-h08"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAh-Na-9m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

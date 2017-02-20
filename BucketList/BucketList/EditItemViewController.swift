@@ -15,8 +15,17 @@ class EditItemViewController: UIViewController {
     var longToDisplay = 0.0
     var descToDisplay = "None"
 
+    @IBOutlet weak var descriptionField: UITextField!
+    @IBOutlet weak var longitudeField: UITextField!
+    @IBOutlet weak var latitudeField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameField.text = nameToDisplay
+        latitudeField.text = String(format:"%f", latToDisplay)
+        longitudeField.text = String(format:"%f", longToDisplay)
+        descriptionField.text = descToDisplay
 
         // Do any additional setup after loading the view.
     }
