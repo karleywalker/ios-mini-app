@@ -59,8 +59,8 @@ class BucketListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //PROBLEM PROBLEM PROBLEM!!!!!!
-        return 0
+        
+        return 1
     }
 
     
@@ -69,6 +69,7 @@ class BucketListTableViewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "BucketListTableViewCell"
         
+        //PROBLEM PROBLEM PROBLEM!!!!!!
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BucketListTableViewCell
         
         // Fetches the appropriate note for the data source layout.
@@ -76,10 +77,10 @@ class BucketListTableViewController: UITableViewController {
         
         cell.nameLabel.text = item.name
         
-        let dateFormatter = DateFormatter()
+       let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         let convertedDate = dateFormatter.string(from: item.date)
-        cell.dateLabel.text = convertedDate
+        cell.dateLabel.text = convertedDate 
         
         return cell
     }
