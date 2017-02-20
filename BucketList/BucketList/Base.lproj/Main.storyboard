@@ -63,7 +63,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="f7k-NV-5Re" kind="presentation" id="QHK-YP-YrE"/>
+                        <segue destination="f7k-NV-5Re" kind="presentation" identifier="editItemSegue" id="QHK-YP-YrE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzB-vJ-hZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,7 +265,7 @@
                                     <navigationItem title="Edit Item" id="nGt-V0-XUE">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0de-xX-2rz">
                                             <connections>
-                                                <segue destination="hnY-RG-NUW" kind="show" id="M0x-De-RhW"/>
+                                                <segue destination="hnY-RG-NUW" kind="presentation" id="M0x-De-RhW"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="uF5-yX-EL5"/>
