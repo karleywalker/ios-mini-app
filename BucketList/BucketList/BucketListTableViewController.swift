@@ -26,11 +26,11 @@ class BucketListTableViewController: UITableViewController {
         dateFormatterGet.dateFormat = "yyyy-MM-dd hh:mm:ss"
         
         let date1: Date = dateFormatterGet.date(from: "2018-03-29 12:24:26")!
-        let date2: Date = dateFormatterGet.date(from: "2018-02-28 12:24:26")!
+        let date2: Date = dateFormatterGet.date(from: "2017-02-20 12:24:26")!
         let date3: Date = dateFormatterGet.date(from: "2018-05-29 12:24:26")!
-        let date4: Date = dateFormatterGet.date(from: "2018-01-29 12:24:26")!
-        let date5: Date = dateFormatterGet.date(from: "2019-05-29 12:24:26")!
-        let date6: Date = dateFormatterGet.date(from: "2012-01-29 12:24:26")!
+        let date4: Date = dateFormatterGet.date(from: "2017-04-11 12:24:26")!
+        let date5: Date = dateFormatterGet.date(from: "2014-09-29 12:24:26")!
+        let date6: Date = dateFormatterGet.date(from: "2018-05-22 12:24:26")!
         
         let item1 = BucketItem(name: "Hike Humpback at sunrise", desc: "Take a panoramic picture of all those trees.", latitude:1.1, longitude: 1.1, date: date1 as Date)
         bucketItems += [item1]
@@ -38,14 +38,13 @@ class BucketListTableViewController: UITableViewController {
         item2.isdone = true
         bucketItems += [item2]
         let item3 = BucketItem(name: "Register to graduate", desc: "Make sure you get a diploma", latitude:3.3, longitude: 3.3, date: date3 as Date)
-        item3.isdone = true
         bucketItems += [item3]
         let item4 = BucketItem(name: "Get a bagel in Rice", desc: "They're delicious", latitude:4.4, longitude: 4.4, date: date4 as Date)
         bucketItems += [item4]
-        let item5 = BucketItem(name: "last of not done", desc: "They're delicious", latitude:4.4, longitude: 4.4, date: date5 as Date)
+        let item5 = BucketItem(name: "Live in dorms", desc: "You have to do it, so..", latitude:5.5, longitude: 5.5, date: date5 as Date)
         bucketItems += [item5]
-        let item6 = BucketItem(name: "first of done", desc: "They're delicious", latitude:4.4, longitude: 4.4, date: date6 as Date)
-        item6.isdone = true
+        item5.isdone = true
+        let item6 = BucketItem(name: "Go to the career fair.", desc: "Go get a job.", latitude:6.6, longitude: 6.6, date: date6 as Date)
         bucketItems += [item6]
         
         //sort by date
