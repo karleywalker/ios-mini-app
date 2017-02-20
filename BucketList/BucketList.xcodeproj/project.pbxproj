@@ -16,6 +16,8 @@
 		9C9F08461E5A5AFB004FD065 /* BucketListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F08441E5A5AFB004FD065 /* BucketListTableViewController.xib */; };
 		9C9F08481E5A5B36004FD065 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F08471E5A5B36004FD065 /* AddItemViewController.swift */; };
 		9C9F084A1E5A5B48004FD065 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F08491E5A5B48004FD065 /* EditItemViewController.swift */; };
+		9C9F08501E5A74D9004FD065 /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F084F1E5A74D9004FD065 /* BucketItem.swift */; };
+		9C9F08521E5A79CE004FD065 /* BucketListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F08511E5A79CE004FD065 /* BucketListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9C9F08441E5A5AFB004FD065 /* BucketListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BucketListTableViewController.xib; sourceTree = "<group>"; };
 		9C9F08471E5A5B36004FD065 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		9C9F08491E5A5B48004FD065 /* EditItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		9C9F084F1E5A74D9004FD065 /* BucketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		9C9F08511E5A79CE004FD065 /* BucketListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				9C9F08441E5A5AFB004FD065 /* BucketListTableViewController.xib */,
 				9C9F08471E5A5B36004FD065 /* AddItemViewController.swift */,
 				9C9F08491E5A5B48004FD065 /* EditItemViewController.swift */,
+				9C9F084F1E5A74D9004FD065 /* BucketItem.swift */,
+				9C9F08511E5A79CE004FD065 /* BucketListTableViewCell.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9F08501E5A74D9004FD065 /* BucketItem.swift in Sources */,
 				9C4B5DF31E5109AB00D219A1 /* ViewController.swift in Sources */,
 				9C9F08481E5A5B36004FD065 /* AddItemViewController.swift in Sources */,
+				9C9F08521E5A79CE004FD065 /* BucketListTableViewCell.swift in Sources */,
 				9C9F084A1E5A5B48004FD065 /* EditItemViewController.swift in Sources */,
 				9C9F08451E5A5AFB004FD065 /* BucketListTableViewController.swift in Sources */,
 				9C4B5DF11E5109AB00D219A1 /* AppDelegate.swift in Sources */,
