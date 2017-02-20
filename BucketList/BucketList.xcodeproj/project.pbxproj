@@ -65,11 +65,11 @@
 				9C4B5DF01E5109AB00D219A1 /* AppDelegate.swift */,
 				9C4B5DF21E5109AB00D219A1 /* ViewController.swift */,
 				9C4B5DF41E5109AB00D219A1 /* Main.storyboard */,
+				9C9F08441E5A5AFB004FD065 /* BucketListTableViewController.xib */,
 				9C4B5DF71E5109AB00D219A1 /* Assets.xcassets */,
 				9C4B5DF91E5109AB00D219A1 /* LaunchScreen.storyboard */,
 				9C4B5DFC1E5109AB00D219A1 /* Info.plist */,
 				9C9F08431E5A5AFB004FD065 /* BucketListTableViewController.swift */,
-				9C9F08441E5A5AFB004FD065 /* BucketListTableViewController.xib */,
 				9C9F08471E5A5B36004FD065 /* AddItemViewController.swift */,
 				9C9F08491E5A5B48004FD065 /* EditItemViewController.swift */,
 			);
