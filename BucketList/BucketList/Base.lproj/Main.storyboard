@@ -159,7 +159,7 @@
                                     <navigationItem title="Add Item" id="hw9-nH-iKo" userLabel="Add Item">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OJb-wN-l7R">
                                             <connections>
-                                                <segue destination="hnY-RG-NUW" kind="show" id="Rs2-ZE-atr"/>
+                                                <segue destination="hLw-cL-J8u" kind="unwind" unwindAction="unwindToBucketListWithSegue:" id="9VS-cC-fBQ"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="kBI-xU-FY1">
@@ -276,7 +276,7 @@
                                     <navigationItem title="Edit Item" id="nGt-V0-XUE">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0de-xX-2rz">
                                             <connections>
-                                                <segue destination="hnY-RG-NUW" kind="show" id="M0x-De-RhW"/>
+                                                <segue destination="wMK-5X-CWR" kind="unwind" unwindAction="unwindToBucketListWithSegue:" id="wSX-L9-RZY"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="uF5-yX-EL5">
@@ -322,7 +322,4 @@
             <point key="canvasLocation" x="-517.5" y="819.71830985915494"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Rs2-ZE-atr"/>
-    </inferredMetricsTieBreakers>
 </document>
