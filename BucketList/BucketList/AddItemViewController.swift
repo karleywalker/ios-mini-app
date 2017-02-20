@@ -34,6 +34,29 @@ class AddItemViewController: UIViewController {
     }
     
 
+    // MARK: Segue
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "unwindFromAddID") {
+            if let svc = segue.destination as? BucketListTableViewController {
+                
+                /**
+                let nameU = self.nameDisplay.text
+                let latitudeU = Double(self.latitudeDisplay.text!)
+                let longitudeU = Double(self.longitudeDisplay.text!)
+                let descU = self.descriptionDisplay.text
+                let dateU = self.dateDisplay.date
+                **/
+                //let item = BucketItem(name: nameU!, desc: descU!, latitude:latitudeU!, longitude: longitudeU!, date: dateU)
+                let item = BucketItem(name: "nameU", desc: "descU", latitude:5.22, longitude: 3.14, date: Date())
+                svc.bucketItems += [item]
+                svc.tableView.reloadData()
+                
+                
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
