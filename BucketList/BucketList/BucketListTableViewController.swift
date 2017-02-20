@@ -126,24 +126,37 @@ class BucketListTableViewController: UITableViewController {
         return true
     }
     
+
     // Lets you add various buttons when you swipe
-    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
        
         let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
             //self.view.backgroundColor = .red
-            let cellIdentifier = "BucketListTableViewCell"
+            //let cellIdentifier = "BucketListTableViewCell"
             
-            //PROBLEM PROBLEM PROBLEM!!!!!!
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: editActionsForRowAt) as! BucketListTableViewCell
-            cell.backgroundColor = .purple
+            //let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BucketListTableViewCell
+            let cell = tableView.cellForRow(at: indexPath)
+
+            let item = self.bucketItems[indexPath.row]
+            
+            if( cell?.isEditing )!{
+          
+                cell?.backgroundColor = UIColor(
+                    red: 0x9c/255,
+                    green: 0x50/255,
+                    blue: 0x9c/255,
+                    alpha: 1.0)
+                item.isdone = true
+            }
             self.tableView.reloadData()
+
+            
         }
-        
         done.backgroundColor = .green
         
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             
-            let index = editActionsForRowAt[1]
+            let index = indexPath[1]
             self.setCount(newCount: index)
             self.performSegue(withIdentifier: "editItemSegue", sender: nil)
             
