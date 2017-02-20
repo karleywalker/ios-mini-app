@@ -10,11 +10,17 @@ import UIKit
 
 class AddItemViewController: UIViewController {
     
+    @IBOutlet weak var nameDisplay: UITextField!
+    @IBOutlet weak var latitudeDisplay: UITextField!
+    @IBOutlet weak var longitudeDisplay: UITextField!
+    @IBOutlet weak var descriptionDisplay: UITextField!
+    @IBOutlet weak var dateDisplay: UIDatePicker!
     
-
+    var index = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 

@@ -172,12 +172,23 @@ class BucketListTableViewController: UITableViewController {
                 
             }
         }
+        if (segue.identifier == "addItemSegue") {
+            if let svc = segue.destination as? AddItemViewController {
+                
+           
+                svc.index = bucketItems.count
+                
+                
+            }
+        }
     }
     
     
     @IBAction func unwindToBucketList(segue: UIStoryboardSegue) {
         //"unwindFromEditID"
     }
+    
+    
     
     /*
      // Override to support editing the table view.
