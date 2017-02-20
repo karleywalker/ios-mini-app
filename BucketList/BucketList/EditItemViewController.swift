@@ -52,7 +52,7 @@ class EditItemViewController: UIViewController {
                 item.longitude = Double(self.longitudeField.text!)!
                 item.desc = self.descriptionField.text!
                 item.date = self.dateField.date
-                
+                svc.tableView.reloadData()
                 
                 
             }
