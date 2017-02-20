@@ -41,6 +41,19 @@ class AddItemViewController: UIViewController {
     // MARK: Segue
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (self.latitudeDisplay.text?.characters.count == 0) {
+            return;
+        }
+        if (self.longitudeDisplay.text?.characters.count == 0) {
+            return;
+        }
+        if (self.nameDisplay.text?.characters.count == 0) {
+            return;
+        }
+        if (self.descDisplay.text?.characters.count == 0) {
+            return;
+        }
+        
         if (segue.identifier == "unwindFromAddID") {
             if let svc = segue.destination as? BucketListTableViewController {
                 
