@@ -88,6 +88,9 @@ class BucketListTableViewController: UITableViewController {
         let convertedDate = dateFormatter.string(from: item.date)
         cell.dateLabel.text = convertedDate
         
+        //cell.backgroundColor = .purple;
+        
+        
         return cell
     }
     
@@ -104,7 +107,18 @@ class BucketListTableViewController: UITableViewController {
         
     }
     
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let rowToMove = bucketItems[fromIndexPath.row]
+        bucketItems.remove(at: fromIndexPath.row)
+        bucketItems.insert(rowToMove, at: fromIndexPath.row)
+    }
     
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -112,15 +126,19 @@ class BucketListTableViewController: UITableViewController {
         return true
     }
     
-    
     // Lets you add various buttons when you swipe
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        
-        
+       
         let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
+            //self.view.backgroundColor = .red
+            let cellIdentifier = "BucketListTableViewCell"
             
-            
+            //PROBLEM PROBLEM PROBLEM!!!!!!
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: editActionsForRowAt) as! BucketListTableViewCell
+            cell.backgroundColor = .purple
+            self.tableView.reloadData()
         }
+        
         done.backgroundColor = .green
         
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
@@ -172,20 +190,7 @@ class BucketListTableViewController: UITableViewController {
      }
      }
      */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
+
     
     /*
      // MARK: - Navigation
