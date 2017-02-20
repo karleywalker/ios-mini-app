@@ -265,7 +265,7 @@
                                     <navigationItem title="Edit Item" id="nGt-V0-XUE">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0de-xX-2rz">
                                             <connections>
-                                                <segue destination="hnY-RG-NUW" kind="presentation" id="M0x-De-RhW"/>
+                                                <segue destination="hnY-RG-NUW" kind="show" id="M0x-De-RhW"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="uF5-yX-EL5"/>
