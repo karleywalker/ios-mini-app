@@ -10,6 +10,8 @@ import UIKit
 
 class BucketListTableViewController: UITableViewController {
     
+    @IBOutlet weak var nameField: UITextField!
+    
     var bucketItems = [BucketItem]()
     
     func loadSampleItems() {
@@ -116,7 +118,7 @@ class BucketListTableViewController: UITableViewController {
         done.backgroundColor = .green
         
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
-            
+         //   self.performSegue(withIdentifier: "editItemSegue", sender: nil)
             
         }
         edit.backgroundColor = .orange
@@ -125,6 +127,22 @@ class BucketListTableViewController: UITableViewController {
         return [done, edit]
     }
 
+    
+    // MARK: Segue
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "editItemSegue") {
+            if let svc = segue.destination as? EditItemViewController {
+            
+                
+             //   svc.nameToDisplay = nameField.text!
+                
+                
+                
+            }
+        }
+    }
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

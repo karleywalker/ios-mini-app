@@ -9,6 +9,11 @@
 import UIKit
 
 class EditItemViewController: UIViewController {
+    
+    var nameToDisplay = "None"
+    var latToDisplay = 0.0
+    var longToDisplay = 0.0
+    var descToDisplay = "None"
 
     override func viewDidLoad() {
         super.viewDidLoad()
